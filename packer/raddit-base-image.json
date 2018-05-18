@@ -15,10 +15,11 @@
     "ssh_username": "ubuntu",
     "ami_name": "raddit-base {{timestamp}}"
   }],
-  "provisioners": [{
+  "provisioners": [
+    {
     "type": "shell",
     "script": "{{template_dir}}/../scripts/configuration.sh",
     "execute_command": "sudo {{.Path}}"
-  }]
+    }
+  ]
 }
-
